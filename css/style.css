@@ -4,6 +4,10 @@
   font-family: 'Neogrey';
   src: url('../fonts/neogrey/NeogreyRegular.otf'); /* IE9 Compat Modes */
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/oswald.otf'); /* IE9 Compat Modes */
+}
 /*
 ----------------------------------
 
