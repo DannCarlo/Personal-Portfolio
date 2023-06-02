@@ -27,7 +27,7 @@
                 if(validateForm()){
                  e.preventDefault();
                   $.ajax({type: "POST",
-                          url: "https://www.danncarlo.com/send-email.php",
+                          url: "../send-email.php",
                           data:$("#form1").serialize(),
                           success:function(result){
                           $("#successmsg").html(result);
