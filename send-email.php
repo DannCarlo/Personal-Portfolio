@@ -1,5 +1,6 @@
 <?php 
   
+  header('Content-Security-Policy: upgrade-insecure-requests');
  $name=$_POST["name"];
  $from=$_POST["email"];
  $msg=$_POST["message"];
