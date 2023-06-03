@@ -1,10 +1,11 @@
+$(window).load(function() {
+    // FOR LOADING WEBPAGE ANIMATION
+    $('.webpage-loading-overlay').fadeOut(200);
+});
+
 $(document).ready(function () {
 
-    $(window).load(function() {
-        // FOR LOADING WEBPAGE ANIMATION
-        $('.webpage-loading-overlay').fadeOut(200);
-    });
-    
+
     "use strict";
     try {
 
