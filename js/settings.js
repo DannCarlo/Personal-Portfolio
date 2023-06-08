@@ -85,7 +85,7 @@ progressBar(80, $('#progressBar23'));
 progressBar(75, $('#progressBar24'));
 
 
-$('.button-switch-container > button').click(function () {
+$('.skills .button-switch-container > button').click(function () {
     if (!$(this).hasClass('active')) {
         $('.button-switch-container > button').removeClass('active');
         if ($(this).hasClass('toggle-engineering')) {
@@ -95,6 +95,25 @@ $('.button-switch-container > button').click(function () {
         else {
             $('.skills-related.engineering-related').fadeOut(200);
             $('.skills-related.programming-related').fadeIn(700);
+        }
+        $(this).addClass('active');
+    }
+});
+
+$('.about .professions-selector > button').click(function () {
+    if (!$(this).hasClass('active')) {
+        $('.professions-selector > button').removeClass('active');
+        if ($(this).hasClass('toggle-engineering')) {
+            $('.profession-container.programming-related').slideUp(400);
+            $('.profession-container.engineering-related').slideDown(700);
+            $('.about .programming-bg').fadeOut(200);
+            $('.about .engineering-bg').fadeIn(700);
+        }
+        else {
+            $('.profession-container.engineering-related').slideUp(400);
+            $('.profession-container.programming-related').slideDown(700);
+            $('.about .engineering-bg').fadeOut(200);
+            $('.about .programming-bg').fadeIn(700);
         }
         $(this).addClass('active');
     }

@@ -21,13 +21,10 @@
                 } else{ $("#message").removeClass("validation"); }
               return err;
             }
-            /*
             $(document).ready(function(){
 				"use strict"; 
               $("#button").click(function(e){
                 if(validateForm()){
-                  const myForm = event.target;
-                  const formData = new FormData(myForm);
                  e.preventDefault();
                   $.ajax({type: "POST",
                           url: "../send-email.php",
@@ -47,5 +44,4 @@
                }
               });
             });
-            */
         

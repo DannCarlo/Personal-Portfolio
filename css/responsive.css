@@ -419,6 +419,9 @@
     .about .inner {
         width: auto
     }
+    .about .bg-img {
+        opacity: .25;
+    }
     .jspPane {
         width: 100% !important
     }
