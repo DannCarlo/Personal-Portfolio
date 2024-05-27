@@ -30,7 +30,7 @@ function validateForm() {
   if (title == "" || title == null) {
       $("#name").addClass("validation");
 
-      var err = false;
+      var err = true;
   } else {
       $("#name").removeClass("validation");
   }
@@ -38,14 +38,14 @@ function validateForm() {
   if (!(/(.+)@(.+){2,}\.(.+){2,}/.test(email))) {
       $("#email").addClass("validation");
 
-      var err = false;
+      var err = true;
   } else {
       $("#email").removeClass("validation");
   }
   var title = $("#message").val();
   if (title == "" || title == null) {
       $("#message").addClass("validation");
-      var err = false;
+      var err = true;
   } else {
       $("#message").removeClass("validation");
   }
