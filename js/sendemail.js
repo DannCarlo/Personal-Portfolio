@@ -40,7 +40,7 @@ $(document).ready(function() {
             },
             body: new URLSearchParams(formData).toString(),
           })
-          .then(() => console.log("Form successfully submitted"))
+          .then(() => alert("Thank you for your submission"))
           .catch((error) => alert(error));
         } else {
             return false;
