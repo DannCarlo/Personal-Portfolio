@@ -26,7 +26,7 @@ const handleSubmit = (event) => {
 function validateForm() {
   "use strict";
   var title = $("#name").val();
-  var err = true;
+  var err = false;
   if (title == "" || title == null) {
       $("#name").addClass("validation");
 
