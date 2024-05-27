@@ -1,50 +1,18 @@
-function validateForm() {
-    "use strict";
-    var title = $("#name").val();
-    var err = true;
-    if (title == "" || title == null) {
-        $("#name").addClass("validation");
+const handleSubmit = (event) => {
+  event.preventDefault();
 
-        var err = false;
-    } else {
-        $("#name").removeClass("validation");
-    }
-    var email = $("#email").val();
-    if (!(/(.+)@(.+){2,}\.(.+){2,}/.test(email))) {
-        $("#email").addClass("validation");
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => alert("Thank you for your submission"))
+    .catch((error) => alert(error));
+};
 
-        var err = false;
-    } else {
-        $("#email").removeClass("validation");
-    }
-    var title = $("#message").val();
-    if (title == "" || title == null) {
-        $("#message").addClass("validation");
-        var err = false;
-    } else {
-        $("#message").removeClass("validation");
-    }
-    return err;
-}
-$(document).ready(function() {
-    "use strict";
-    $("#button").click(function(e) {
-        if (!validateForm()) {
-          const formData = new FormData(document.querySelector("form"));
-
-          fetch("/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: new URLSearchParams(formData).toString(),
-          })
-          .then(() => alert("Thank you for your submission"))
-          .catch((error) => alert(error));
-        } else {
-            return false;
-        }
-    });
-});
-
-        
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
