@@ -65,8 +65,10 @@ progressBar(85, $('#progressBar5'));
 progressBar(85, $('#progressBar6'));
 
 progressBar(85, $('#progressBar7'));
-progressBar(75, $('#progressBar8'));
+progressBar(70, $('#progressBar8'));
 progressBar(75, $('#progressBar9'));
+progressBar(75, $('#progressBar25'));
+progressBar(70, $('#progressBar26'));
 progressBar(80, $('#progressBar10'));
 progressBar(90, $('#progressBar11'));
 progressBar(75, $('#progressBar12'));
