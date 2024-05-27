@@ -30,7 +30,6 @@ $(document).ready(function() {
     "use strict";
     $("#button").click(function(e) {
         if (!validateForm()) {
-          e.preventDefault();
           const formData = new FormData(document.querySelector("form"));
 
           fetch("/", {
